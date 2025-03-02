@@ -1,0 +1,35 @@
+package Notas;
+
+public class Student {
+	String name;
+	Double note1;
+	Double note2;
+	Double note3;
+	
+	public Student(String name, double note1, double note2, double note3) {
+		this.name = name;
+		this.note1 = note1;
+		this.note2 = note2;
+		this.note3 = note3;
+	}
+	
+	public double calculateFinalGrade() {
+		return note1 + note2 + note3;
+	}
+	
+	public double missingValue() {
+		return calculateFinalGrade() - 60.00;
+	}
+	
+	public void exibirNotaFinal() {
+		if(calculateFinalGrade() < 60.00) {
+			System.out.println("Nota final: " + calculateFinalGrade());
+			System.out.println("Reprovado!");
+			System.out.println("Faltaram " + missingValue() + " pontos.");
+		}
+		else {
+			System.out.println("Nota final: " + calculateFinalGrade());
+			System.out.println("Aprovado!");
+		}
+	}
+}
