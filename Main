@@ -1,0 +1,42 @@
+package Notas;
+import java.util.Scanner;
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Preencha os dados a seguir: ");
+		System.out.println("Nome: ");
+		String name = scanner.nextLine();
+		
+		while(true) {
+		System.out.println("Nota do primeiro trimestre: ");
+		Double note1 = scanner.nextDouble();
+		if(note1 > 30) {
+			System.out.println("Informe uma nota válida! (Abaixo de 30)");
+		} else {
+			
+		System.out.println("Nota do segundo trimestre: ");
+		Double note2 = scanner.nextDouble();
+		
+		if(note2 > 35) {
+			System.out.println("Informe uma nota válida! (Abaixo de 35)");
+		}else {
+		
+		System.out.println("Nota do terceiro trimestre:");
+		Double note3 = scanner.nextDouble();
+		if(note3 > 35) {
+			System.out.println("Informe uma nota válida! (Abaixo de 35)");
+		}else {		
+		
+		Student student = new Student(name, note1, note2, note3);
+		
+		student.exibirNotaFinal();
+		
+		break;
+		}
+	}
+	}
+}
+}
+}
